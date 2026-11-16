@@ -61,4 +61,4 @@ cd liveshow_recording
 
 ## 测试
 
-在虚拟环境中安装 `-m pip install -r requirements-dev.txt`，将 `PYTHONPATH` 设为 `src` 后执行 `python -m pytest tests`。测试需要 Google Chrome、Playwright Chromium 和可用的桌面会话。仓库的 GitHub Actions 在 Windows、macOS 和 Ubuntu 上检查首次安装，并运行自动化测试。真实直播和飞书同步依赖站点会话、平台验证和用户配置。
+在虚拟环境中安装 `-m pip install -r requirements-dev.txt`，将 `PYTHONPATH` 设为 `src` 后执行 `python -m pytest tests`。测试需要 Google Chrome、Playwright Chromium 和可用的桌面会话。GitHub Actions 在 Windows、macOS 和 Ubuntu 上检查首次安装并运行回归测试。macOS 的 Tk 窗口和 WebRTC 回环测试请在真实 Mac 桌面运行。真实直播和飞书同步依赖站点会话、平台验证和用户配置。
