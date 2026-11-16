@@ -1,0 +1,4 @@
+playwright==1.63.0
+httpx>=0.28,<0.29
+imageio-ffmpeg>=0.6,<0.7
+keyring>=25,<26; sys_platform != 'win32'
