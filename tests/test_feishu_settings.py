@@ -1,3 +1,4 @@
+import os
 
 import pytest
 
@@ -12,6 +13,7 @@ from whatnot_monitor.config import (
 )
 
 
+@pytest.mark.skipif(os.name != "nt", reason="Requires the Windows DPAPI user store")
 def test_windows_secret_round_trip_and_environment_fallback(tmp_path, monkeypatch):
     monkeypatch.setenv("FEISHU_APP_ID", "legacy-id")
     monkeypatch.setenv("FEISHU_APP_SECRET", "legacy-secret")

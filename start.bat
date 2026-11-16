@@ -1,6 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
+set "PYTHONUTF8=1"
 set "WHATNOT_MODE=start"
 if "%~1"=="--check" set "WHATNOT_MODE=check"
 if exist ".venv\Scripts\python.exe" goto use_venv
